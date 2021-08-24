@@ -114,6 +114,8 @@
 
 .about-container p {
   font-size: 20px;
+  max-width: 70%;
+  margin: 0 auto;
   margin-bottom: 20px;
 }
 
@@ -150,6 +152,7 @@
 
 .portfolio-container .portfolio__elements .elements__group {
   width: 350px;
+  margin: 0 5px;
   margin-bottom: 20px;
 }
 
@@ -176,10 +179,6 @@
   color: #594F4F;
 }
 
-.portfolio-container .portfolio__elements .middle {
-  margin-left: 20px;
-  margin-right: 20px;
-}
 
 /*End portfolio*/
 footer {
