@@ -1,0 +1,263 @@
+$accent: #2B2A5E
+$opacity: rgba(0,0,0,.4)
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Roboto', sans-serif
+    font-weight: bold
+    scroll-behavior: smooth
+
+
+.main-container
+    width: 100%
+    height: 600px
+    background: url("main-background.jpg")
+    background-size: cover
+    background-position-x: top
+    background-position-y: center
+    padding-right: 85px
+    padding-left: 85px
+    padding-top: 40px
+    header
+        width: 100%
+        height: 30px
+        position: relative
+        z-index: 10
+        ul
+            list-style: none
+            text-align: end
+            li
+                display: inline-block
+                padding-left: 43px
+                a
+                    color: #fff
+                    text-decoration: none
+                    &:hover
+                        color: #f3e880
+    
+.main-flex
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: 400px
+    .flex__title
+        padding: 34px 16px 63px 16px
+        border: 3px solid #fff
+        border-radius: 5px
+        text-align: center
+        position: relative
+        z-index: 10
+        h1
+            font-size: 65px
+            color: #fff
+        h3
+            font-size: 22px
+            color: #fff
+.main-container::before
+    content: ' '
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    position: absolute
+    background: rgba( 0, 0, 0, .5)
+
+/*End main*/
+.about-container
+    position: relative
+    z-index: 10
+    padding: 0 85px
+    text-align: center
+    background-color: #f7f2f2
+    
+    img
+        position: relative
+        width: 150px
+        margin: 0 auto
+        margin-top: -100px
+    h2
+        padding: 10px
+        padding-top: 20px
+        font-size: 40px
+        text-align: center
+    p
+        font-size: 20px
+        margin: 0 auto
+        margin-bottom: 20px
+        max-width: 70%
+    hr
+        background-color: #000
+        height: 3px
+
+/*End about*/
+
+#portfolio
+    padding: 50px 130px
+    border-radius: 10px
+    padding: 20px
+    h2
+        color: #fff
+        font-size: 40px
+        text-align: center
+    .portfolio__gallery
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        grid-gap: 10px
+        img
+            width: 100%
+            height: 218px
+        .gallery__image
+            position: relative
+            .image__overlay
+                width: 100%
+                height: 218px
+                position: absolute
+                top: 0
+                left: 0
+                right: 0
+                bottom: 0
+                color: #fff
+                background-color: rgba(0, 0, 0, .8)
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                opacity: 0
+                transition: opacity .25s
+                .image__description
+                    font-weight: 700
+                    font-size: 20px
+                span
+                    text-align: center
+                .image__button
+                    text-decoration: none
+                    color: #fff
+                    border: 2px solid #fff
+                    padding: 10px 15px
+                    font-weight: 800
+                    margin-top: 15px
+        .image__overlay:hover
+            opacity: 1
+
+/*End portfolio*/
+footer
+    background-color: #000
+    width: 100%
+    height: 100px
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: center
+    text-align: center
+    padding: 0
+    a
+        width: 20px
+        height: 40px
+        margin: 10px
+        border-radius: 3px
+        img
+            width: 20px
+            height: 30px
+            text-align: center
+            padding-top: 7px
+        .footer__fb
+            img
+                height: 27px
+
+@media screen and (max-width: 768px)
+    
+    #portfolio
+        padding: 50px 20px
+        width: 100%
+        margin: 0 auto
+        h2
+            color: #000
+        .portfolio__gallery
+            display: flex
+            flex-wrap: wrap
+            text-align: center
+            justify-content: center
+            img
+                text-align: center
+                
+                max-width: 400px
+                
+                object-fit: contain
+            .gallery__image
+                width: 45%
+                min-width: 250px
+                .image__overlay
+                    width: 80%
+                    height: 100px
+                    margin: 0 auto
+                    position: relative
+                    display: block
+                    opacity: 1
+                    background: none
+                    color: #000
+                    .image__button
+                        display: block
+                        color: #000
+                        border-color: #000
+                        margin-bottom: 10px
+    
+
+@media screen and ( max-width: 480px )
+    .main-container
+        height: 300px
+        padding: 20px 20px
+        header
+            width: 100%
+            ul
+                text-align: center
+                li
+                     padding: 5px
+    .main-flex
+        height: 200px
+        .flex__title
+            padding: 15px
+            h1
+                font-size: 25px
+            h3
+                font-size: 15px
+    .about-container
+        padding: 20px 20px
+        img
+            width: 150px
+        h2
+            font-size: 30px
+        p
+            text-align: center
+            font-size: 18px
+    .portfolio-container
+        padding: 20px 20px
+        h2
+            font-size: 30px
+        .portfolio__elements
+            width: 90%
+            margin: 40px auto
+            .elements__group
+                width: 100%
+                h3
+                    font-size: 20px
+                img
+                    width: 100%
+            .middle
+                margin-left: 0
+                margin-right: 0
+    footer
+        a
+            width: 50px
+            height: 40px
+            margin: 5px
+            border-radius: 3px
+        img
+            width: 15px
+            height: 20px
+            text-align: center
+            padding-top: 7px
+@media screen and (max-width: 1259px)
+    .elements__group
+        margin: 20px
